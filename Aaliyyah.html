@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mirror Mirror who is the prettiest of them all</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc;
+            color: #ff1493;
+        }
+        header {
+            background-color: #f5f5dc;
+            color: #ff1493;
+            padding: 10px 0;
+            text-align: center;
+        }
+        #our-story, #photo-gallery, #message-generator, #countdown-timer {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ff1493;
+            border-radius: 5px;
+            color: #f5f5dc;
+        }
+        footer {
+            background-color: #f5f5dc;
+            color: #ff1493;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            width: 20%;
+            height: auto;
+            margin-top: 10px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        #countdown-timer {
+            background-color: #f5f5dc;
+            color: #ff1493;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        // JavaScript code here
+        // Countdown Timer For Next Birthday
+        var countDownDate = new Date("March 17, 2024 00:00:00").getTime();
+        var countdownFunction = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+        // Message Generator
+        var messages = [
+            "Aaliyyah, you are the sunshine in my day and the moonlight of my nights.",
+            "Aaliyyah, I cherish every moment we spend together.",
+            "Aaliyyah, you fill every inch of my life with your beautiful and radiant presence.",
+            "My dearest Aaliyyah, your smile brightens up my world and makes everything better.",
+            "Aaliyyah, you are the melody that plays in my heart and the rhythm that keeps me going.",
+            "In your eyes, Aaliyyah, I see a reflection of a love so pure and true.",
+            "Aaliyyah, being with you feels like a dream that I never want to wake up from.",
+            "You are my inspiration, my motivation, and my reason to strive for greatness, Aaliyyah.",
+            "Every day with you, Aaliyyah, feels like a new adventure filled with love and joy.",
+            "Aaliyyah, you have the power to turn the ordinary into extraordinary with your love.",
+            "In your embrace, Aaliyyah, I find solace and a sense of belonging.",
+            "Aaliyyah, you are the missing piece that completes the puzzle of my heart.",
+            "Aaliyyah, you bring out the best in me and make me want to be a better person.",
+            "With you by my side, Aaliyyah, I feel invincible and ready to conquer the world.",
+            "Aaliyyah, your smile is like music to my ears and brings me pure happiness.",
+            "In your presence, Aaliyyah, time stands still and all worries fade away.",
+            "Aaliyyah, you are the most beautiful soul I have ever encountered, inside and out.",
+            "In your eyes, Aaliyyah, I see a future filled with love, laughter, and endless possibilities.",
+            "Aaliyyah, your love is the beacon that guides me through the darkest nights.",
+            "Your Time, Aaliyyah, is the most precious gift I have ever received.",
+            "Aaliyyah, your love is like a melody that my heart can't stop singing.",
+            "With every beat of my heart, Aaliyyah, my love for you grows stronger.",
+            "Aaliyyah, your beauty is like a beautiful garden that I want to tend to forever.",
+            "Your beauty, Aaliyyah, is like a star that lights up my universe.",
+            "Every moment spent with you, Aaliyyah, is a moment I treasure.",
+            "Aaliyyah, your love is the compass that always leads me home.",
+            "Aaliyyah, you be the jollof rice in the party of my life.",
+            "Aaliyyah, you be the fuel for my generator when NEPA take light.",
+            "Aaliyyah, you dey burst my brain!",
+            "Aaliyyah, your love sweet pass Mama Iyabo's puff puff.",
+            "Aaliyyah, you be the egusi in my soup.",
+            "Aaliyyah, you dey give me joy, like say tomorrow no dey.",
+            "Aaliyyah, your love dey scatter my dada.",
+            "Aaliyyah, you be the 'Oga at the top' of my heart.",
+            "Aaliyyah, you be the correct pepper for my asun.",
+            "Aaliyyah, you be the gala to my La Casera.",
+            "Aaliyyah, you are so fine its unreal.",
+            "My Ms Thickems.",
+            "My one and only",
+			"Waka"
+        ];
+
+        function generateMessage() {
+            var randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("message").innerHTML = messages[randomIndex];
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 style="color: #ff1493;">Mirror Mirror who is the prettiest of them all</h1>
+    </header>
+    <main>
+        <section id="our-story">
+            <h2>Real Life Super Model</h2>
+        </section>
+        <section id="photo-gallery">
+            <h2>Photo Gallery</h2>
+            <img src="https://i.imgur.com/DsC0H8t.jpeg" alt="Image 2">
+            <video src="https://i.imgur.com/hJQqYJM.mp4" controls></video>
+            <img src="https://i.imgur.com/crmtKGx.jpeg" alt="Image 1">
+			<img src="https://i.imgur.com/NokHuKa.jpeg" alt="Image 3">
+        </section>
+        <section id="message-generator">
+            <h2>My Real Life Barbie</h2>
+            <button onclick="generateMessage()" style="background-color: #f5f5dc; color: #ff1493;">Click me</button>
+            <p id="message">Click Me.</p>
+        </section>
+        <section id="countdown-timer">
+            <h2 style="color: #ff1493;">Countdown Timer</h2>
+            <p id="timer" style="font-size: 24px;">Loading...</p>
+        </section>
+    </main>
+    <footer>
+        <p style="color: #ff1493;">Created By Godstime for my one and only Aaliyyah</p>
+    </footer>
+    <script>
+        // Place the JavaScript code at the end to ensure the elements are loaded before accessing them
+        // JavaScript code here
+        // Countdown Timer For Next Birthday
+        var countDownDate = new Date("March 17, 2024 00:00:00").getTime();
+        var countdownFunction = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
